@@ -1,0 +1,27 @@
+<script>
+    {
+        var items = 20;
+        console.log(items);//allowed
+    }
+    items = 400;// reassignment allowed
+    console.log(items);//allowed
+
+    {
+        let product_count = 300;
+        console.log(product_count);
+        product_count = 900;//allowed
+        console.log(product_count);
+    }
+    //
+    // console.log(product_count);//not allowed
+
+
+    {
+        const institute = 'kodnest';
+        console.log(institute);
+        //institute = 'other';//not allowed
+
+
+    }
+    //console.log(institute)//not allowed
+</script> 
