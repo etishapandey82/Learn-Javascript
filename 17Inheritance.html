@@ -1,0 +1,37 @@
+<!-- Inheritance of javascript -->
+
+<script>
+    class Employee{
+        constructor(name, id) {
+            this.Ename = name;
+            this.Eid = id;
+          }
+          work() {
+            console.log(this.Ename, "is working");
+          }
+    }
+
+    class EmployeePersonalInfo extends Employee{
+        constructor(name,id,email,phone) {
+            super(name,id);
+            this.Eemail = email;
+            this.Ephone = phone;
+
+        }
+        getDetails() {
+            console.log("Employee Name is: " ,this.Ename);
+            console.log("Employee Id is:",this.Eid);
+            console.log("Employee Email is: ",this.Eemail);
+            console.log("Employee Phone is: ",this.Ephone);
+        }
+    }
+
+
+    let pe1 = new EmployeePersonalInfo('Akash',101,'akash@kod.com',7345689256);
+    pe1.getDetails();
+
+    console.log("--------------------------------------");
+    let pe2 = new EmployeePersonalInfo('Neha',102,'neha@kod.com',73453755296);
+    pe2.getDetails();
+    
+</script>

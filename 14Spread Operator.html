@@ -1,0 +1,30 @@
+<!-- Spread Operator -->
+<script>
+    function add(...args) { //agrs=[]
+        if (args.length === 0) {
+            console.log('No Arguments....!');
+        } else {
+            // let sum = 0;
+            // for (let i =0; i< arguments.length; i++) {
+            //     sum = sum + arguments[i];
+            // }
+            // console.log('Sum of Arguments is', sum);
+            let sum = args.reduce((acc,ele) => acc + ele,0);//allowed
+            console.log('Sum of Arguments is', sum);
+        }
+    }
+    
+    add(10,20,30,40);// op- 100
+
+//arrow function allowed by spread operator
+    let sub = (...args) => {
+        if(args.length === 0) {
+            console.log('No Arguments');
+        } else {
+            let sum = args.reduce((acc,ele) => acc + ele,0);
+            console.log('Sum is:',sum);
+        }
+
+    }
+    sub(30,20);//op--50
+</script>
