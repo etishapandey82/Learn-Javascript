@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>getElementBYClassName()</title>
+</head>
+<body>
+
+    <p class = "container">PARA 1</p>
+    <p class = "container">PARA 2</p>
+    <p class = "container">PARA 3</p>
+    <button onclick="fun()">Click</button>
+    <br><br>
+    <button onclick="fun2()">greet</button>
+
+    <script>
+        function fun() {
+            const target = document.getElementsByClassName('container')
+        console.log( "Length before dom update is : " ,target.length);
+
+        //creating new file by this createelement
+        const newEle = document.createElement('p');//<p></p>
+        newEle.textContent = 'Hello';// <p>Hello</p>//textcontent and innertext are same 
+        newEle.classList.add('container');//<p class = "container">hello</p>
+        console.log(newEle);
+
+        document.body.appendChild(newEle);
+        console.log( target,"  length after dom Updated is : " ,target.length);
+        }
+// use of innerhtml
+        function fun2() {
+            const target = document.getElementsByClassName('container')
+        console.log( "Length before dom update is : " ,target.length);
+
+        //creating new file by this createelement
+        const newEle = document.createElement('div');//<div></div>
+        newEle.innerHTML = `<h3 style = 'color:blue'>Hello</h3>`;// <div><h3 style = 'color:blue'>Hello</h3></div> 
+        newEle.classList.add('container');
+        //console.log(newEle);
+
+        document.body.appendChild(newEle);
+        console.log( "  length after dom Updated is : " ,target.length);
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>classList.add() and classList.remove()</title>
+    <style>
+        .styles{color:blue;
+
+        }
+    </style>
+</head>
+<body>
+    <p id ="para">Welcome to dom manipulation</p>
+    <button onclick="fun()">CLICK</button>
+
+    <script>
+        
+    const target = document.getElementById('para');
+    let toggle = false;
+function fun() {
+    if (!toggle) {
+        target.classList.add('styles');
+        toggle = true;
+
+    } else {
+        target.classList.remove('styles');
+        toggle = false;
+    }
+        }
+    </script>
+</body>
+</html>
